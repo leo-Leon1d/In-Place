@@ -17,3 +17,11 @@ struct Place {
     var postInfo: String
 
 }
+
+struct FriendsData {
+    var name: String
+    var description: String
+    var imageAvatar: String
+    var mainImage: String
+    var date: String
+}

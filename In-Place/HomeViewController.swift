@@ -19,9 +19,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         Place(city: "San-Francisco", description: "Lorem ipsum dolor sit amet, consescetor adipiscing elit", imageAvatar: ["Avatar1", "Avatar2", "Avatar3"], mainImage: "Image", numberOfLikes: 8, placeName: "San-Francisco Bridge", postInfo: "+15 people booked"),
         Place(city: "Zagreb", description: "Lorem ipsum dolor sit amet, consescetor adipiscing elit", imageAvatar: ["Avatar4", "Avatar5", "Avatar6"], mainImage: "Image1", numberOfLikes: 10, placeName: "Zagreb Restaraunt", postInfo: "+21 people booked")
                           ]
+    var selectedPlace: Place?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return places.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let place = places[indexPath.row]
+        selectedPlace = place
+        performSegue(withIdentifier: "openDetails", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,6 +47,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "openDetails", let vc = segue.destination as? PlaceViewController, let place = selectedPlace {
+            vc.placeData = place
+        }
     }
 
     override func viewDidLoad() {

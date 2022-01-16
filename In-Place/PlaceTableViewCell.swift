@@ -16,8 +16,13 @@ class PlaceTableViewCell: UITableViewCell {
     @IBOutlet weak var secondFriend: UIImageView!
     @IBOutlet weak var thirdFriend: UIImageView!
     @IBOutlet weak var mainImageDescription: UILabel!
+    @IBOutlet weak var friendName: UILabel!
+    @IBOutlet weak var postDate: UILabel!
     @IBOutlet weak var likeButton: UIImageView!
     @IBOutlet weak var bottomPlace: UILabel!
     @IBOutlet weak var mainImagePlace: UILabel!
     @IBOutlet weak var postInfo: UILabel!
+    @IBOutlet weak var friendImage: UIImageView!
+    @IBOutlet weak var friendPfp: UIImageView!
+    @IBOutlet weak var friendDescription: UILabel!
 }

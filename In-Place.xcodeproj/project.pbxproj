@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF4D8716274113CB00635358 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4D8715274113CB00635358 /* PlaceViewController.swift */; };
+		BF5155F7279183D900B88E65 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5155F6279183D900B88E65 /* CollectionViewCell.swift */; };
 		BFCEF94127007BAE0063E3BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEF94027007BAE0063E3BD /* AppDelegate.swift */; };
 		BFCEF94327007BAE0063E3BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEF94227007BAE0063E3BD /* SceneDelegate.swift */; };
 		BFCEF94827007BAE0063E3BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFCEF94627007BAE0063E3BD /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF4D8715274113CB00635358 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
+		BF5155F6279183D900B88E65 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BFCEF93D27007BAE0063E3BD /* In-Place.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "In-Place.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCEF94027007BAE0063E3BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFCEF94227007BAE0063E3BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,16 +75,17 @@
 		BFCEF93F27007BAE0063E3BD /* In-Place */ = {
 			isa = PBXGroup;
 			children = (
-				BFCEF9732721AFA60063E3BD /* Fonts */,
 				BFCEF94627007BAE0063E3BD /* Main.storyboard */,
 				BFCEF94B27007BAF0063E3BD /* LaunchScreen.storyboard */,
 				BFCEF94027007BAE0063E3BD /* AppDelegate.swift */,
 				BFCEF94227007BAE0063E3BD /* SceneDelegate.swift */,
+				BF4D8715274113CB00635358 /* PlaceViewController.swift */,
 				BFCEF9572709FFB50063E3BD /* HomeViewController.swift */,
 				BFCEF95A270A00180063E3BD /* FriendsViewController.swift */,
 				BFCEF95D270A00420063E3BD /* ProfileViewController.swift */,
 				BFCEF9642719BAAD0063E3BD /* SomeViewController.swift */,
 				BFCEF9702719CB1B0063E3BD /* PlaceTableViewCell.swift */,
+				BF5155F6279183D900B88E65 /* CollectionViewCell.swift */,
 				BFCEF94927007BAF0063E3BD /* Assets.xcassets */,
 				BFCEF94E27007BAF0063E3BD /* Info.plist */,
 			);
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				BFCEF9682719C7E00063E3BD /* Places.swift */,
+				BFCEF9732721AFA60063E3BD /* Fonts */,
 			);
 			path = Structures;
 			sourceTree = "<group>";
@@ -176,9 +182,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5155F7279183D900B88E65 /* CollectionViewCell.swift in Sources */,
 				BFCEF95B270A00180063E3BD /* FriendsViewController.swift in Sources */,
 				BFCEF94127007BAE0063E3BD /* AppDelegate.swift in Sources */,
 				BFCEF95E270A00420063E3BD /* ProfileViewController.swift in Sources */,
+				BF4D8716274113CB00635358 /* PlaceViewController.swift in Sources */,
 				BFCEF9712719CB1B0063E3BD /* PlaceTableViewCell.swift in Sources */,
 				BFCEF9692719C7E00063E3BD /* Places.swift in Sources */,
 				BFCEF94327007BAE0063E3BD /* SceneDelegate.swift in Sources */,
