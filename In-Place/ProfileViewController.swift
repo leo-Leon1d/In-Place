@@ -7,23 +7,35 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    @IBOutlet weak var Interests: UICollectionView!
+    
+    var intrests: [MyInterests] = [
+        MyInterests(placeName: "Karakum", place: "Desert", image: "Backround"),
+        MyInterests(placeName: "Maldives", place: "Indian Ocean", image: "Backround 2"),
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
-        // Do any additional setup after loading the view.
+        
+        Interests.delegate = self
+        Interests.dataSource = self
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        intrests.count
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell: InterestsCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: InterestsCollectionViewCell.id, for: indexPath) as! InterestsCollectionViewCell
+        
+        return cell
+        
+    }
+    
 
 }

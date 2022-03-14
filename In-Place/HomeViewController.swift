@@ -1,15 +1,11 @@
-//
-//  HomeViewController.swift
-//  In-Place
-//
-//  Created by Леонид Исраелян on 03.10.2021.
-//
 
 import UIKit
 
 protocol test {
     func testmethod()
 }
+
+
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -71,13 +67,44 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     private func addGradient() {
     
         let layer = CAGradientLayer()
+//      let rect = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height/2)
         layer.frame = view.bounds
-        layer.colors = [UIColor.orange.cgColor, UIColor.purple.cgColor]
+        layer.colors = [UIColor.peach?.cgColor as Any, UIColor.yellow?.cgColor as Any]
         layer.startPoint = CGPoint(x: 1.0, y: 0.0)
-        layer.endPoint = CGPoint(x: 1.0, y: 0.0)
+        layer.endPoint = CGPoint(x: 1.0, y: 1.0)
         view.layer.insertSublayer(layer, at: 0)
         
     }
     
+    
+    
 
+}
+
+
+@IBDesignable extension UIView {
+    
+    @IBInspectable var shadowRadius: CGFloat {
+        get { return layer.shadowRadius }
+        set { layer.shadowRadius = newValue }
+    }
+    
+    @IBInspectable var shadowOpacity: CGFloat {
+        get { return CGFloat(layer.shadowOpacity) }
+        set { layer.shadowOpacity = Float(newValue) }
+    }
+    
+    @IBInspectable var shadowOffset: CGSize {
+        get { return layer.shadowOffset }
+        set { layer.shadowOffset = newValue }
+    }
+    
+    @IBInspectable var shadowColor: UIColor? {
+        get { guard let cgColor = layer.shadowColor else { return nil }
+            return UIColor(cgColor: cgColor) }
+        
+        set { layer.shadowColor = newValue?.cgColor }
+        
+    }
+    
 }
