@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Places: Codable {
+struct Model: Codable {
     var place_name: String
     var place_description: String
     var place_images: [String]
